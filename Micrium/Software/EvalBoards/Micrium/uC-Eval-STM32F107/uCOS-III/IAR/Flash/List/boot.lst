@@ -1,0 +1,355 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.50.1.10123/W32 for ARM       28/Nov/2017  16:24:32
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\iap\boot.c
+#    Command line =  
+#        "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\iap\boot.c"
+#        -D USE_STDPERIPH_DRIVER -lCN
+#        "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List"
+#        -o "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M3 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench 7.3\arm\INC\c\DLib_Config_Full.h"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\crccheck\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\csnrprotocol\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\IAP_pragram\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\usart\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\OS\uCOS-III\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\ST\STM32\inc\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-LIB\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\ARM-Cortex-M3\CMSIS\CM3\CoreSupport\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\ARM-Cortex-M3\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Source\"
+#        -On --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.3\arm\CMSIS\Include\"
+#    List file    =  
+#        F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List\boot.lst
+#    Object file  =  
+#        F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj\boot.o
+#
+###############################################################################
+
+F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III - 副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\iap\boot.c
+      1          #include <includes.h>
+      2          //#include  <stm32f10x_nvic.h>
+      3          
+      4          
+      5          #define	USER_APP_START_ADDR		(STM32_FLASH_BASE + 0x00010000	)
+      6          
+      7          
+      8          typedef  void (*pFunction)(void);			    //定义一个函数类型的参数.
+
+   \                                 In section .bss, align 4
+      9          pFunction   pApp;
+   \                     pApp:
+   \   00000000                      DS8 4
+     10          //void __set_CONTROL(uint32_t control);
+     11          
+     12          
+     13          /*******************************************************************************
+     14           * 名    称： IAP_JumpTo()
+     15           * 功    能： 跳转到应用程序段
+     16           * 入口参数：
+     17           * 出口参数： 无
+     18           * 作    者： 无名沈
+     19           * 创建日期： 2014-04-23
+     20           * 修    改： 
+     21           * 修改日期： 
+     22           *******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+     23          void JMP_Boot(u32 appAddr)
+     24          {    
+   \                     JMP_Boot: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+     25              u32     JumpAddress = 0;
+   \   00000004   0x2500             MOVS     R5,#+0
+     26              u8      cpu_sr;
+     27                  
+     28              /***********************************************
+     29              * 描述： 保存程序地址
+     30              */
+     31              //IAP_SetAppAddr(appAddr);
+     32              /***********************************************
+     33              * 描述： 关中断，防止值被中断修改
+     34              */
+     35              CPU_CRITICAL_ENTER();
+   \   00000006   0x.... 0x....      BL       CPU_SR_Save
+   \   0000000A   0x0006             MOVS     R6,R0
+   \   0000000C   0x.... 0x....      BL       CPU_IntDisMeasStart
+     36              /***********************************************
+     37              * 描述： 外设恢复默认，避免进入应用程序后影响程序正常运行
+     38              */
+     39              //IAP_DevDeInit();  
+     40              /***********************************************
+     41              * 描述： 获取应用入口及初始化堆栈指针
+     42              */
+     43              SCB->VTOR = USER_APP_START_ADDR & 0x1FFFFF80;	//??ò??D???òá?
+   \   00000010   0x....             LDR.N    R0,??DataTable3  ;; 0x8010000
+   \   00000012   0x....             LDR.N    R1,??DataTable3_1  ;; 0xe000ed08
+   \   00000014   0x6008             STR      R0,[R1, #+0]
+     44              JumpAddress   =*(volatile u32*) (appAddr + 4); // 地址+4为PC地址
+   \   00000016   0x6860             LDR      R0,[R4, #+4]
+   \   00000018   0x0005             MOVS     R5,R0
+     45              pApp          = (pFunction)JumpAddress;         // 函数指针指向APP
+   \   0000001A   0x....             LDR.N    R0,??DataTable3_2
+   \   0000001C   0x6005             STR      R5,[R0, #+0]
+     46          //    __set_MSP       (*(volatile u32*) appAddr);    // 初始化主堆栈指针（MSP）
+     47          //    __set_PSP       (*(volatile u32*) appAddr);    // 初始化进程堆栈指针（PSP）
+     48          //    __set_CONTROL   (0);                            // 清零CONTROL
+     49              /***********************************************
+     50              * 描述： 跳转到APP程序
+     51              */
+     52              pApp();
+   \   0000001E   0x....             LDR.N    R0,??DataTable3_2
+   \   00000020   0x6800             LDR      R0,[R0, #+0]
+   \   00000022   0x4780             BLX      R0
+     53              
+     54              CPU_CRITICAL_EXIT();
+   \   00000024   0x.... 0x....      BL       CPU_IntDisMeasStop
+   \   00000028   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   0000002A   0x0030             MOVS     R0,R6
+   \   0000002C   0x.... 0x....      BL       CPU_SR_Restore
+     55          }
+   \   00000030   0xBD70             POP      {R4-R6,PC}       ;; return
+     56          //__asm void JMP_Boot( uint32_t address ){
+     57          //   LDR SP, [R0]		;Load new stack pointer address
+     58          //   LDR PC, [R0, #4]	;Load new program counter address
+     59          //}
+     60          
+     61          #define zyIrqDisable()  CPU_INT_DIS()
+     62          #define zyIrqEnable()   CPU_INT_EN()
+     63          
+     64          
+     65          //启动app
+
+   \                                 In section .text, align 2, keep-with-next
+     66          void Boot( void )
+     67          {
+   \                     Boot: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     68          //	 void (*userProgram)();   					           /*函数指针*/
+     69          
+     70          	//SCB->VTOR = USER_APP_START_ADDR & 0x1FFFFF80;	//偏移中断向量
+     71              SCB->VTOR = USER_APP_START_ADDR & 0x1FFFFF80;	//偏移中断向量
+   \   00000002   0x....             LDR.N    R0,??DataTable3  ;; 0x8010000
+   \   00000004   0x....             LDR.N    R1,??DataTable3_1  ;; 0xe000ed08
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+     72          	JMP_Boot(USER_APP_START_ADDR);
+   \   00000008   0x....             LDR.N    R0,??DataTable3  ;; 0x8010000
+   \   0000000A   0x.... 0x....      BL       JMP_Boot
+     73          //	userProgram = (void (*)()) (USER_APP_START_ADDR+1);
+     74          //	(*userProgram)();													/*启动						*/	 
+     75          	
+     76          }
+   \   0000000E   0xBD01             POP      {R0,PC}          ;; return
+     77          
+
+   \                                 In section .text, align 2, keep-with-next
+     78          void Jumpto_APP(void)
+     79          {
+   \                     Jumpto_APP: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+     80              INT32U IapSpInitVal;
+     81          
+     82              INT32U IapJumpAddr;
+     83          
+     84              void (*pIapFun)(void);
+     85          
+     86              RCC_DeInit();//关闭外设
+   \   00000002   0x.... 0x....      BL       RCC_DeInit
+     87          
+     88              NVIC_DeInit();
+   \   00000006   0x.... 0x....      BL       NVIC_DeInit
+     89          
+     90              //__disable_irq(); //关中断（）如IAP关中断 APP如果没用UCOS系统，APP
+     91          
+     92              //初始化后要开中断，用UCOS后，在起动任务后会开中断
+     93              
+     94              
+     95              IapSpInitVal = *(INT32U *)USER_APP_START_ADDR;
+   \   0000000A   0x....             LDR.N    R0,??DataTable3  ;; 0x8010000
+   \   0000000C   0x6800             LDR      R0,[R0, #+0]
+   \   0000000E   0x0004             MOVS     R4,R0
+     96          
+     97              IapJumpAddr = *(INT32U *)(USER_APP_START_ADDR + 4);
+   \   00000010   0x....             LDR.N    R0,??DataTable3_3  ;; 0x8010004
+   \   00000012   0x6800             LDR      R0,[R0, #+0]
+   \   00000014   0x0005             MOVS     R5,R0
+     98          
+     99              if((IapSpInitVal & 0x2FFE0000)==0x20000000)//检查栈顶地址是否合法.
+   \   00000016   0x....             LDR.N    R0,??DataTable3_4  ;; 0x2ffe0000
+   \   00000018   0x4020             ANDS     R0,R0,R4
+   \   0000001A   0xF1B0 0x5F00      CMP      R0,#+536870912
+   \   0000001E   0xD107             BNE.N    ??Jumpto_APP_0
+    100          
+    101              {
+    102                  __set_MSP (IapSpInitVal);
+   \   00000020   0x0020             MOVS     R0,R4
+   \   00000022   0x.... 0x....      BL       __set_MSP
+    103                  //__set_MSP       (*(volatile u32*) appAddr);    // 初始化主堆栈指针（MSP）
+    104                  __set_PSP       (IapSpInitVal);    // 初始化进程堆栈指针（PSP）
+   \   00000026   0x0020             MOVS     R0,R4
+   \   00000028   0x.... 0x....      BL       __set_PSP
+    105                  //__set_CONTROL   (0);    
+    106                  //__set_CONTROL   (0);
+    107                  
+    108                  pIapFun = (void (*)(void))IapJumpAddr;
+   \   0000002C   0x002E             MOVS     R6,R5
+    109          
+    110                  (*pIapFun) ();
+   \   0000002E   0x47B0             BLX      R6
+    111          
+    112              }
+    113          
+    114          }
+   \                     ??Jumpto_APP_0: (+1)
+   \   00000030   0xBD70             POP      {R4-R6,PC}       ;; return
+    115          
+    116          typedef  void (*iapfun)(void);				//定义一个函数类型的参数.   
+
+   \                                 In section .bss, align 4
+    117          iapfun jump2app; 
+   \                     jump2app:
+   \   00000000                      DS8 4
+    118          //跳转到应用程序段
+    119          //appxaddr:用户代码起始地址.
+
+   \                                 In section .text, align 2, keep-with-next
+    120          void iap_load_app(u32 appxaddr)
+    121          {
+   \                     iap_load_app: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    122          	if(((*(vu32*)appxaddr)&0x2FFE0000)==0x20000000)	//检查栈顶地址是否合法.
+   \   00000004   0x6820             LDR      R0,[R4, #+0]
+   \   00000006   0x....             LDR.N    R1,??DataTable3_4  ;; 0x2ffe0000
+   \   00000008   0x4008             ANDS     R0,R1,R0
+   \   0000000A   0xF1B0 0x5F00      CMP      R0,#+536870912
+   \   0000000E   0xD108             BNE.N    ??iap_load_app_0
+    123          	{ 
+    124          		jump2app=(iapfun)*(vu32*)(appxaddr+4);		//用户代码区第二个字为程序开始地址(复位地址)		
+   \   00000010   0x6860             LDR      R0,[R4, #+4]
+   \   00000012   0x....             LDR.N    R1,??DataTable3_5
+   \   00000014   0x6008             STR      R0,[R1, #+0]
+    125          		MSR_MSP(*(vu32*)appxaddr);					//初始化APP堆栈指针(用户代码区的第一个字用于存放栈顶地址)
+   \   00000016   0x6820             LDR      R0,[R4, #+0]
+   \   00000018   0x.... 0x....      BL       MSR_MSP
+    126          		jump2app();									//跳转到APP.
+   \   0000001C   0x....             LDR.N    R0,??DataTable3_5
+   \   0000001E   0x6800             LDR      R0,[R0, #+0]
+   \   00000020   0x4780             BLX      R0
+    127          	}
+    128          }		 
+   \                     ??iap_load_app_0: (+1)
+   \   00000022   0xBD10             POP      {R4,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3:
+   \   00000000   0x08010000         DC32     0x8010000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_1:
+   \   00000000   0xE000ED08         DC32     0xe000ed08
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_2:
+   \   00000000   0x........         DC32     pApp
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_3:
+   \   00000000   0x08010004         DC32     0x8010004
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_4:
+   \   00000000   0x2FFE0000         DC32     0x2ffe0000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_5:
+   \   00000000   0x........         DC32     jump2app
+    129          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   Boot
+         8   -> JMP_Boot
+      16   JMP_Boot
+        16   -- Indirect call
+        16   -> CPU_IntDisMeasStart
+        16   -> CPU_IntDisMeasStop
+        16   -> CPU_SR_Restore
+        16   -> CPU_SR_Save
+      16   Jumpto_APP
+        16   -- Indirect call
+        16   -> NVIC_DeInit
+        16   -> RCC_DeInit
+        16   -> __set_MSP
+        16   -> __set_PSP
+       8   iap_load_app
+         8   -- Indirect call
+         8   -> MSR_MSP
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+       4  ??DataTable3_1
+       4  ??DataTable3_2
+       4  ??DataTable3_3
+       4  ??DataTable3_4
+       4  ??DataTable3_5
+      16  Boot
+      50  JMP_Boot
+      50  Jumpto_APP
+      36  iap_load_app
+       4  jump2app
+       4  pApp
+
+ 
+   8 bytes in section .bss
+ 176 bytes in section .text
+ 
+ 176 bytes of CODE memory
+   8 bytes of DATA memory
+
+Errors: none
+Warnings: 4

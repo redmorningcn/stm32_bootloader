@@ -1,0 +1,881 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.50.1.10123/W32 for ARM       28/Nov/2017  16:24:33
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\crccheck\crccheck.c
+#    Command line =  
+#        "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\crccheck\crccheck.c"
+#        -D USE_STDPERIPH_DRIVER -lCN
+#        "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List"
+#        -o "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M3 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench 7.3\arm\INC\c\DLib_Config_Full.h"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\crccheck\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\csnrprotocol\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\IAP_pragram\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\usart\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\OS\uCOS-III\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\ST\STM32\inc\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-LIB\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\ARM-Cortex-M3\CMSIS\CM3\CoreSupport\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\ARM-Cortex-M3\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Source\"
+#        -On --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.3\arm\CMSIS\Include\"
+#    List file    =  
+#        F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List\crccheck.lst
+#    Object file  =  
+#        F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj\crccheck.o
+#
+###############################################################################
+
+F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III - 副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\crccheck\crccheck.c
+      1          #include <includes.h>
+      2          #include "stdint.h"
+      3          
+      4          #include  <stdarg.h>
+      5          #include  <stdio.h>
+      6          #include  <math.h>
+      7          #if defined(USE_HAL_DRIVER)
+      8          #include  <stm32f4xx_hal.h>
+      9          #else
+     10          #include  <stm32f10x_lib.h>
+     11          #endif
+     12          
+     13          					            
+     14          
+
+   \                                 In section .rodata, align 4
+     15          const uint16 sd_crc16_table[256]={
+   \                     sd_crc16_table:
+   \   00000000   0x0000 0x1021      DC16 0, 4129, 8258, 12387, 16516, 20645, 24774, 28903, 33032, 37161
+   \              0x2042 0x3063
+   \              0x4084 0x50A5
+   \              0x60C6 0x70E7
+   \              0x8108 0x9129
+   \   00000014   0xA14A 0xB16B      DC16 41290, 45419, 49548, 53677, 57806, 61935, 4657, 528, 12915, 8786
+   \              0xC18C 0xD1AD
+   \              0xE1CE 0xF1EF
+   \              0x1231 0x0210
+   \              0x3273 0x2252
+   \   00000028   0x52B5 0x4294      DC16 21173, 17044, 29431, 25302, 37689, 33560, 45947, 41818, 54205
+   \              0x72F7 0x62D6
+   \              0x9339 0x8318
+   \              0xB37B 0xA35A
+   \              0xD3BD       
+   \   0000003A   0xC39C 0xF3FF      DC16 50076, 62463, 58334, 9314, 13379, 1056, 5121, 25830, 29895, 17572
+   \              0xE3DE 0x2462
+   \              0x3443 0x0420
+   \              0x1401 0x64E6
+   \              0x74C7 0x44A4
+   \   0000004E   0x5485 0xA56A      DC16 21637, 42346, 46411, 34088, 38153, 58862, 62927, 50604, 54669
+   \              0xB54B 0x8528
+   \              0x9509 0xE5EE
+   \              0xF5CF 0xC5AC
+   \              0xD58D       
+   \   00000060   0x3653 0x2672      DC16 13907, 9842, 5649, 1584, 30423, 26358, 22165, 18100, 46939, 42874
+   \              0x1611 0x0630
+   \              0x76D7 0x66F6
+   \              0x5695 0x46B4
+   \              0xB75B 0xA77A
+   \   00000074   0x9719 0x8738      DC16 38681, 34616, 63455, 59390, 55197, 51132, 18628, 22757, 26758
+   \              0xF7DF 0xE7FE
+   \              0xD79D 0xC7BC
+   \              0x48C4 0x58E5
+   \              0x6886       
+   \   00000086   0x78A7 0x0840      DC16 30887, 2112, 6241, 10242, 14371, 51660, 55789, 59790, 63919, 35144
+   \              0x1861 0x2802
+   \              0x3823 0xC9CC
+   \              0xD9ED 0xE98E
+   \              0xF9AF 0x8948
+   \   0000009A   0x9969 0xA90A      DC16 39273, 43274, 47403, 23285, 19156, 31415, 27286, 6769, 2640, 14899
+   \              0xB92B 0x5AF5
+   \              0x4AD4 0x7AB7
+   \              0x6A96 0x1A71
+   \              0x0A50 0x3A33
+   \   000000AE   0x2A12 0xDBFD      DC16 10770, 56317, 52188, 64447, 60318, 39801, 35672, 47931, 43802
+   \              0xCBDC 0xFBBF
+   \              0xEB9E 0x9B79
+   \              0x8B58 0xBB3B
+   \              0xAB1A       
+   \   000000C0   0x6CA6 0x7C87      DC16 27814, 31879, 19684, 23749, 11298, 15363, 3168, 7233, 60846, 64911
+   \              0x4CE4 0x5CC5
+   \              0x2C22 0x3C03
+   \              0x0C60 0x1C41
+   \              0xEDAE 0xFD8F
+   \   000000D4   0xCDEC 0xDDCD      DC16 52716, 56781, 44330, 48395, 36200, 40265, 32407, 28342, 24277
+   \              0xAD2A 0xBD0B
+   \              0x8D68 0x9D49
+   \              0x7E97 0x6EB6
+   \              0x5ED5       
+   \   000000E6   0x4EF4 0x3E13      DC16 20212, 15891, 11826, 7761, 3696, 65439, 61374, 57309, 53244, 48923
+   \              0x2E32 0x1E51
+   \              0x0E70 0xFF9F
+   \              0xEFBE 0xDFDD
+   \              0xCFFC 0xBF1B
+   \   000000FA   0xAF3A 0x9F59      DC16 44858, 40793, 36728, 37256, 33193, 45514, 41451, 53516, 49453
+   \              0x8F78 0x9188
+   \              0x81A9 0xB1CA
+   \              0xA1EB 0xD10C
+   \              0xC12D       
+   \   0000010C   0xF14E 0xE16F      DC16 61774, 57711, 4224, 161, 12482, 8419, 20484, 16421, 28742, 24679
+   \              0x1080 0x00A1
+   \              0x30C2 0x20E3
+   \              0x5004 0x4025
+   \              0x7046 0x6067
+   \   00000120   0x83B9 0x9398      DC16 33721, 37784, 41979, 46042, 49981, 54044, 58239, 62302, 689, 4752
+   \              0xA3FB 0xB3DA
+   \              0xC33D 0xD31C
+   \              0xE37F 0xF35E
+   \              0x02B1 0x1290
+   \   00000134   0x22F3 0x32D2      DC16 8947, 13010, 16949, 21012, 25207, 29270, 46570, 42443, 38312
+   \              0x4235 0x5214
+   \              0x6277 0x7256
+   \              0xB5EA 0xA5CB
+   \              0x95A8       
+   \   00000146   0x8589 0xF56E      DC16 34185, 62830, 58703, 54572, 50445, 13538, 9411, 5280, 1153, 29798
+   \              0xE54F 0xD52C
+   \              0xC50D 0x34E2
+   \              0x24C3 0x14A0
+   \              0x0481 0x7466
+   \   0000015A   0x6447 0x5424      DC16 25671, 21540, 17413, 42971, 47098, 34713, 38840, 59231, 63358
+   \              0x4405 0xA7DB
+   \              0xB7FA 0x8799
+   \              0x97B8 0xE75F
+   \              0xF77E       
+   \   0000016C   0xC71D 0xD73C      DC16 50973, 55100, 9939, 14066, 1681, 5808, 26199, 30326, 17941, 22068
+   \              0x26D3 0x36F2
+   \              0x0691 0x16B0
+   \              0x6657 0x7676
+   \              0x4615 0x5634
+   \   00000180   0xD94C 0xC96D      DC16 55628, 51565, 63758, 59695, 39368, 35305, 47498, 43435, 22596
+   \              0xF90E 0xE92F
+   \              0x99C8 0x89E9
+   \              0xB98A 0xA9AB
+   \              0x5844       
+   \   00000192   0x4865 0x7806      DC16 18533, 30726, 26663, 6336, 2273, 14466, 10403, 52093, 56156, 60223
+   \              0x6827 0x18C0
+   \              0x08E1 0x3882
+   \              0x28A3 0xCB7D
+   \              0xDB5C 0xEB3F
+   \   000001A6   0xFB1E 0x8BF9      DC16 64286, 35833, 39896, 43963, 48026, 19061, 23124, 27191, 31254
+   \              0x9BD8 0xABBB
+   \              0xBB9A 0x4A75
+   \              0x5A54 0x6A37
+   \              0x7A16       
+   \   000001B8   0x0AF1 0x1AD0      DC16 2801, 6864, 10931, 14994, 64814, 60687, 56684, 52557, 48554, 44427
+   \              0x2AB3 0x3A92
+   \              0xFD2E 0xED0F
+   \              0xDD6C 0xCD4D
+   \              0xBDAA 0xAD8B
+   \   000001CC   0x9DE8 0x8DC9      DC16 40424, 36297, 31782, 27655, 23652, 19525, 15522, 11395, 7392, 3265
+   \              0x7C26 0x6C07
+   \              0x5C64 0x4C45
+   \              0x3CA2 0x2C83
+   \              0x1CE0 0x0CC1
+   \   000001E0   0xEF1F 0xFF3E      DC16 61215, 65342, 53085, 57212, 44955, 49082, 36825, 40952, 28183
+   \              0xCF5D 0xDF7C
+   \              0xAF9B 0xBFBA
+   \              0x8FD9 0x9FF8
+   \              0x6E17       
+   \   000001F2   0x7E36 0x4E55      DC16 32310, 20053, 24180, 11923, 16050, 3793, 7920
+   \              0x5E74 0x2E93
+   \              0x3EB2 0x0ED1
+   \              0x1EF0       
+     16          
+     17          0x0000, 0x1021, 0x2042, 0x3063, 0x4084, 0x50A5, 0x60C6, 0x70E7,
+     18          0x8108, 0x9129, 0xA14A, 0xB16B, 0xC18C, 0xD1AD, 0xE1CE, 0xF1EF,
+     19          0x1231, 0x0210, 0x3273, 0x2252, 0x52B5, 0x4294, 0x72F7, 0x62D6,
+     20          0x9339, 0x8318, 0xB37B, 0xA35A, 0xD3BD, 0xC39C, 0xF3FF, 0xE3DE,
+     21          0x2462, 0x3443, 0x0420, 0x1401, 0x64E6, 0x74C7, 0x44A4, 0x5485,
+     22          0xA56A, 0xB54B, 0x8528, 0x9509, 0xE5EE, 0xF5CF, 0xC5AC, 0xD58D,
+     23          0x3653, 0x2672, 0x1611, 0x0630, 0x76D7, 0x66F6, 0x5695, 0x46B4,
+     24          0xB75B, 0xA77A, 0x9719, 0x8738, 0xF7DF, 0xE7FE, 0xD79D, 0xC7BC,
+     25          0x48C4, 0x58E5, 0x6886, 0x78A7, 0x0840, 0x1861, 0x2802, 0x3823,
+     26          0xC9CC, 0xD9ED, 0xE98E, 0xF9AF, 0x8948, 0x9969, 0xA90A, 0xB92B,
+     27          0x5AF5, 0x4AD4, 0x7AB7, 0x6A96, 0x1A71, 0x0A50, 0x3A33, 0x2A12,
+     28          0xDBFD, 0xCBDC, 0xFBBF, 0xEB9E, 0x9B79, 0x8B58, 0xBB3B, 0xAB1A,
+     29          0x6CA6, 0x7C87, 0x4CE4, 0x5CC5, 0x2C22, 0x3C03, 0x0C60, 0x1C41,
+     30          0xEDAE, 0xFD8F, 0xCDEC, 0xDDCD, 0xAD2A, 0xBD0B, 0x8D68, 0x9D49,
+     31          0x7E97, 0x6EB6, 0x5ED5, 0x4EF4, 0x3E13, 0x2E32, 0x1E51, 0x0E70,
+     32          0xFF9F, 0xEFBE, 0xDFDD, 0xCFFC, 0xBF1B, 0xAF3A, 0x9F59, 0x8F78,
+     33          0x9188, 0x81A9, 0xB1CA, 0xA1EB, 0xD10C, 0xC12D, 0xF14E, 0xE16F,
+     34          0x1080, 0x00A1, 0x30C2, 0x20E3, 0x5004, 0x4025, 0x7046, 0x6067,
+     35          0x83B9, 0x9398, 0xA3FB, 0xB3DA, 0xC33D, 0xD31C, 0xE37F, 0xF35E,
+     36          0x02B1, 0x1290, 0x22F3, 0x32D2, 0x4235, 0x5214, 0x6277, 0x7256,
+     37          0xB5EA, 0xA5CB, 0x95A8, 0x8589, 0xF56E, 0xE54F, 0xD52C, 0xC50D,
+     38          0x34E2, 0x24C3, 0x14A0, 0x0481, 0x7466, 0x6447, 0x5424, 0x4405,
+     39          0xA7DB, 0xB7FA, 0x8799, 0x97B8, 0xE75F, 0xF77E, 0xC71D, 0xD73C,
+     40          0x26D3, 0x36F2, 0x0691, 0x16B0, 0x6657, 0x7676, 0x4615, 0x5634,
+     41          0xD94C, 0xC96D, 0xF90E, 0xE92F, 0x99C8, 0x89E9, 0xB98A, 0xA9AB,
+     42          0x5844, 0x4865, 0x7806, 0x6827, 0x18C0, 0x08E1, 0x3882, 0x28A3,
+     43          0xCB7D, 0xDB5C, 0xEB3F, 0xFB1E, 0x8BF9, 0x9BD8, 0xABBB, 0xBB9A,
+     44          0x4A75, 0x5A54, 0x6A37, 0x7A16, 0x0AF1, 0x1AD0, 0x2AB3, 0x3A92,
+     45          0xFD2E, 0xED0F, 0xDD6C, 0xCD4D, 0xBDAA, 0xAD8B, 0x9DE8, 0x8DC9,
+     46          0x7C26, 0x6C07, 0x5C64, 0x4C45, 0x3CA2, 0x2C83, 0x1CE0, 0x0CC1,
+     47          0xEF1F, 0xFF3E, 0xCF5D, 0xDF7C, 0xAF9B, 0xBFBA, 0x8FD9, 0x9FF8,
+     48          0x6E17, 0x7E36, 0x4E55, 0x5E74, 0x2E93, 0x3EB2, 0x0ED1, 0x1EF0
+     49          
+     50          };
+     51          
+     52          //extern	void	NOP(void);
+     53          //----------------------------------------------------------------------------
+     54          // 名    称：   uint16 GetCRC16(uint8 *Buf, uint16 Len)
+     55          // 功    能：   取CRC16校验和
+     56          // 入口参数：  
+     57          // 出口参数：   
+     58          //----------------------------------------------------------------------------
+
+   \                                 In section .text, align 2, keep-with-next
+     59          uint16 GetCrc16Check(uint8 *Buf, uint16 Len)
+     60          {
+   \                     GetCrc16Check: (+1)
+   \   00000000   0xB470             PUSH     {R4-R6}
+   \   00000002   0x0002             MOVS     R2,R0
+     61              uint16 crc = 0x0;
+   \   00000004   0x2000             MOVS     R0,#+0
+     62              uint16 i, tmp1;										
+     63              
+     64              //PrintfCOM0("%u");
+     65          //    NOP();
+     66              
+     67              for (i=0; i< Len; i++)
+   \   00000006   0x2500             MOVS     R5,#+0
+   \   00000008   0x002B             MOVS     R3,R5
+   \                     ??GetCrc16Check_0: (+1)
+   \   0000000A   0xB29B             UXTH     R3,R3            ;; ZeroExt  R3,R3,#+16,#+16
+   \   0000000C   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   0000000E   0x428B             CMP      R3,R1
+   \   00000010   0xD20D             BCS.N    ??GetCrc16Check_1
+     68              {
+     69                  tmp1 = crc;
+   \   00000012   0x0004             MOVS     R4,R0
+     70                  crc = sd_crc16_table[(tmp1>>8) ^ *Buf++];
+   \   00000014   0x....             LDR.N    R5,??DataTable2
+   \   00000016   0xB2A4             UXTH     R4,R4            ;; ZeroExt  R4,R4,#+16,#+16
+   \   00000018   0x7816             LDRB     R6,[R2, #+0]
+   \   0000001A   0xEA96 0x2624      EORS     R6,R6,R4, ASR #+8
+   \   0000001E   0xF835 0x5016      LDRH     R5,[R5, R6, LSL #+1]
+   \   00000022   0x0028             MOVS     R0,R5
+   \   00000024   0x1C52             ADDS     R2,R2,#+1
+     71                  crc = crc ^ (tmp1<<8);
+   \   00000026   0xEA90 0x2004      EORS     R0,R0,R4, LSL #+8
+     72              }
+   \   0000002A   0x1C5B             ADDS     R3,R3,#+1
+   \   0000002C   0xE7ED             B.N      ??GetCrc16Check_0
+     73          
+     74              return(crc);
+   \                     ??GetCrc16Check_1: (+1)
+   \   0000002E   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000030   0xBC70             POP      {R4-R6}
+   \   00000032   0x4770             BX       LR               ;; return
+     75          }
+     76          
+     77          ////////////////////////////////////////////////////////////////////////////////
+     78          ////modbus采用的CRC校验
+
+   \                                 In section .data, align 4
+     79          static  unsigned char auchCRCHi[] =
+   \                     auchCRCHi:
+   \   00000000   0x00 0xC1          DC8 0, 193, 129, 64, 1, 192, 128, 65, 1, 192, 128, 65, 0, 193, 129, 64
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \   00000010   0x01 0xC0          DC8 1, 192, 128, 65, 0, 193, 129, 64, 0, 193, 129, 64, 1, 192, 128, 65
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \   00000020   0x01 0xC0          DC8 1, 192, 128, 65, 0, 193, 129, 64, 0, 193, 129, 64, 1, 192, 128, 65
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \   00000030   0x00 0xC1          DC8 0, 193, 129, 64, 1, 192, 128, 65, 1, 192, 128, 65, 0, 193, 129, 64
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \   00000040   0x01 0xC0          DC8 1, 192, 128, 65, 0, 193, 129, 64, 0, 193, 129, 64, 1, 192, 128, 65
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \   00000050   0x00 0xC1          DC8 0, 193, 129, 64, 1, 192, 128, 65, 1, 192, 128, 65, 0, 193, 129, 64
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \   00000060   0x00 0xC1          DC8 0, 193, 129, 64, 1, 192, 128, 65, 1, 192, 128, 65, 0, 193, 129, 64
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \   00000070   0x01 0xC0          DC8 1, 192, 128, 65, 0, 193, 129, 64, 0, 193, 129, 64, 1, 192, 128, 65
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \   00000080   0x01 0xC0          DC8 1, 192, 128, 65, 0, 193, 129, 64, 0, 193, 129, 64, 1, 192, 128, 65
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \   00000090   0x00 0xC1          DC8 0, 193, 129, 64, 1, 192, 128, 65, 1, 192, 128, 65, 0, 193, 129, 64
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \   000000A0   0x00 0xC1          DC8 0, 193, 129, 64, 1, 192, 128, 65, 1, 192, 128, 65, 0, 193, 129, 64
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \   000000B0   0x01 0xC0          DC8 1, 192, 128, 65, 0, 193, 129, 64, 0, 193, 129, 64, 1, 192, 128, 65
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \   000000C0   0x00 0xC1          DC8 0, 193, 129, 64, 1, 192, 128, 65, 1, 192, 128, 65, 0, 193, 129, 64
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \   000000D0   0x01 0xC0          DC8 1, 192, 128, 65, 0, 193, 129, 64, 0, 193, 129, 64, 1, 192, 128, 65
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \   000000E0   0x01 0xC0          DC8 1, 192, 128, 65, 0, 193, 129, 64, 0, 193, 129, 64, 1, 192, 128, 65
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \   000000F0   0x00 0xC1          DC8 0, 193, 129, 64, 1, 192, 128, 65, 1, 192, 128, 65, 0, 193, 129, 64
+   \              0x81 0x40    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x01 0xC0    
+   \              0x80 0x41    
+   \              0x00 0xC1    
+   \              0x81 0x40    
+     80          {
+     81              0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+     82              0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+     83              0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+     84              0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+     85              0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+     86              0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
+     87              0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+     88              0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+     89              0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+     90              0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40,
+     91              0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+     92              0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+     93              0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+     94              0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40,
+     95              0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+     96              0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+     97              0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+     98              0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+     99              0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+    100              0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+    101              0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+    102              0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40,
+    103              0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+    104              0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+    105              0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+    106              0x80, 0x41, 0x00, 0xC1, 0x81, 0x40
+    107          } ;
+    108          
+
+   \                                 In section .data, align 4
+    109          static char auchCRCLo[] = 
+   \                     auchCRCLo:
+   \   00000000   0x00 0xC0          DC8 0, 192, 193, 1, 195, 3, 2, 194, 198, 6, 7, 199, 5, 197, 196, 4, 204
+   \              0xC1 0x01    
+   \              0xC3 0x03    
+   \              0x02 0xC2    
+   \              0xC6 0x06    
+   \              0x07 0xC7    
+   \              0x05 0xC5    
+   \              0xC4 0x04    
+   \              0xCC         
+   \   00000011   0x0C 0x0D          DC8 12, 13, 205, 15, 207, 206, 14, 10, 202, 203, 11, 201, 9, 8, 200
+   \              0xCD 0x0F    
+   \              0xCF 0xCE    
+   \              0x0E 0x0A    
+   \              0xCA 0xCB    
+   \              0x0B 0xC9    
+   \              0x09 0x08    
+   \              0xC8         
+   \   00000020   0xD8 0x18          DC8 216, 24, 25, 217, 27, 219, 218, 26, 30, 222, 223, 31, 221, 29, 28
+   \              0x19 0xD9    
+   \              0x1B 0xDB    
+   \              0xDA 0x1A    
+   \              0x1E 0xDE    
+   \              0xDF 0x1F    
+   \              0xDD 0x1D    
+   \              0x1C         
+   \   0000002F   0xDC 0x14          DC8 220, 20, 212, 213, 21, 215, 23, 22, 214, 210, 18, 19, 211, 17, 209
+   \              0xD4 0xD5    
+   \              0x15 0xD7    
+   \              0x17 0x16    
+   \              0xD6 0xD2    
+   \              0x12 0x13    
+   \              0xD3 0x11    
+   \              0xD1         
+   \   0000003E   0xD0 0x10          DC8 208, 16, 240, 48, 49, 241, 51, 243, 242, 50, 54, 246, 247, 55, 245
+   \              0xF0 0x30    
+   \              0x31 0xF1    
+   \              0x33 0xF3    
+   \              0xF2 0x32    
+   \              0x36 0xF6    
+   \              0xF7 0x37    
+   \              0xF5         
+   \   0000004D   0x35 0x34          DC8 53, 52, 244, 60, 252, 253, 61, 255, 63, 62, 254, 250, 58, 59, 251
+   \              0xF4 0x3C    
+   \              0xFC 0xFD    
+   \              0x3D 0xFF    
+   \              0x3F 0x3E    
+   \              0xFE 0xFA    
+   \              0x3A 0x3B    
+   \              0xFB         
+   \   0000005C   0x39 0xF9          DC8 57, 249, 248, 56, 40, 232, 233, 41, 235, 43, 42, 234, 238, 46, 47
+   \              0xF8 0x38    
+   \              0x28 0xE8    
+   \              0xE9 0x29    
+   \              0xEB 0x2B    
+   \              0x2A 0xEA    
+   \              0xEE 0x2E    
+   \              0x2F         
+   \   0000006B   0xEF 0x2D          DC8 239, 45, 237, 236, 44, 228, 36, 37, 229, 39, 231, 230, 38, 34, 226
+   \              0xED 0xEC    
+   \              0x2C 0xE4    
+   \              0x24 0x25    
+   \              0xE5 0x27    
+   \              0xE7 0xE6    
+   \              0x26 0x22    
+   \              0xE2         
+   \   0000007A   0xE3 0x23          DC8 227, 35, 225, 33, 32, 224, 160, 96, 97, 161, 99, 163, 162, 98, 102
+   \              0xE1 0x21    
+   \              0x20 0xE0    
+   \              0xA0 0x60    
+   \              0x61 0xA1    
+   \              0x63 0xA3    
+   \              0xA2 0x62    
+   \              0x66         
+   \   00000089   0xA6 0xA7          DC8 166, 167, 103, 165, 101, 100, 164, 108, 172, 173, 109, 175, 111
+   \              0x67 0xA5    
+   \              0x65 0x64    
+   \              0xA4 0x6C    
+   \              0xAC 0xAD    
+   \              0x6D 0xAF    
+   \              0x6F         
+   \   00000096   0x6E 0xAE          DC8 110, 174, 170, 106, 107, 171, 105, 169, 168, 104, 120, 184, 185
+   \              0xAA 0x6A    
+   \              0x6B 0xAB    
+   \              0x69 0xA9    
+   \              0xA8 0x68    
+   \              0x78 0xB8    
+   \              0xB9         
+   \   000000A3   0x79 0xBB          DC8 121, 187, 123, 122, 186, 190, 126, 127, 191, 125, 189, 188, 124
+   \              0x7B 0x7A    
+   \              0xBA 0xBE    
+   \              0x7E 0x7F    
+   \              0xBF 0x7D    
+   \              0xBD 0xBC    
+   \              0x7C         
+   \   000000B0   0xB4 0x74          DC8 180, 116, 117, 181, 119, 183, 182, 118, 114, 178, 179, 115, 177
+   \              0x75 0xB5    
+   \              0x77 0xB7    
+   \              0xB6 0x76    
+   \              0x72 0xB2    
+   \              0xB3 0x73    
+   \              0xB1         
+   \   000000BD   0x71 0x70          DC8 113, 112, 176, 80, 144, 145, 81, 147, 83, 82, 146, 150, 86, 87, 151
+   \              0xB0 0x50    
+   \              0x90 0x91    
+   \              0x51 0x93    
+   \              0x53 0x52    
+   \              0x92 0x96    
+   \              0x56 0x57    
+   \              0x97         
+   \   000000CC   0x55 0x95          DC8 85, 149, 148, 84, 156, 92, 93, 157, 95, 159, 158, 94, 90, 154, 155
+   \              0x94 0x54    
+   \              0x9C 0x5C    
+   \              0x5D 0x9D    
+   \              0x5F 0x9F    
+   \              0x9E 0x5E    
+   \              0x5A 0x9A    
+   \              0x9B         
+   \   000000DB   0x5B 0x99          DC8 91, 153, 89, 88, 152, 136, 72, 73, 137, 75, 139, 138, 74, 78, 142
+   \              0x59 0x58    
+   \              0x98 0x88    
+   \              0x48 0x49    
+   \              0x89 0x4B    
+   \              0x8B 0x8A    
+   \              0x4A 0x4E    
+   \              0x8E         
+   \   000000EA   0x8F 0x4F          DC8 143, 79, 141, 77, 76, 140, 68, 132, 133, 69, 135, 71, 70, 134, 130
+   \              0x8D 0x4D    
+   \              0x4C 0x8C    
+   \              0x44 0x84    
+   \              0x85 0x45    
+   \              0x87 0x47    
+   \              0x46 0x86    
+   \              0x82         
+   \   000000F9   0x42 0x43          DC8 66, 67, 131, 65, 129, 128, 64
+   \              0x83 0x41    
+   \              0x81 0x80    
+   \              0x40         
+    110          {
+    111              0x00, 0xC0, 0xC1, 0x01, 0xC3, 0x03, 0x02, 0xC2, 0xC6, 0x06,
+    112              0x07, 0xC7, 0x05, 0xC5, 0xC4, 0x04, 0xCC, 0x0C, 0x0D, 0xCD,
+    113              0x0F, 0xCF, 0xCE, 0x0E, 0x0A, 0xCA, 0xCB, 0x0B, 0xC9, 0x09,
+    114              0x08, 0xC8, 0xD8, 0x18, 0x19, 0xD9, 0x1B, 0xDB, 0xDA, 0x1A,
+    115              0x1E, 0xDE, 0xDF, 0x1F, 0xDD, 0x1D, 0x1C, 0xDC, 0x14, 0xD4,
+    116              0xD5, 0x15, 0xD7, 0x17, 0x16, 0xD6, 0xD2, 0x12, 0x13, 0xD3,
+    117              0x11, 0xD1, 0xD0, 0x10, 0xF0, 0x30, 0x31, 0xF1, 0x33, 0xF3,
+    118              0xF2, 0x32, 0x36, 0xF6, 0xF7, 0x37, 0xF5, 0x35, 0x34, 0xF4,
+    119              0x3C, 0xFC, 0xFD, 0x3D, 0xFF, 0x3F, 0x3E, 0xFE, 0xFA, 0x3A,
+    120              0x3B, 0xFB, 0x39, 0xF9, 0xF8, 0x38, 0x28, 0xE8, 0xE9, 0x29,
+    121              0xEB, 0x2B, 0x2A, 0xEA, 0xEE, 0x2E, 0x2F, 0xEF, 0x2D, 0xED,
+    122              0xEC, 0x2C, 0xE4, 0x24, 0x25, 0xE5, 0x27, 0xE7, 0xE6, 0x26,
+    123              0x22, 0xE2, 0xE3, 0x23, 0xE1, 0x21, 0x20, 0xE0, 0xA0, 0x60,
+    124              0x61, 0xA1, 0x63, 0xA3, 0xA2, 0x62, 0x66, 0xA6, 0xA7, 0x67,
+    125              0xA5, 0x65, 0x64, 0xA4, 0x6C, 0xAC, 0xAD, 0x6D, 0xAF, 0x6F,
+    126              0x6E, 0xAE, 0xAA, 0x6A, 0x6B, 0xAB, 0x69, 0xA9, 0xA8, 0x68,
+    127              0x78, 0xB8, 0xB9, 0x79, 0xBB, 0x7B, 0x7A, 0xBA, 0xBE, 0x7E,
+    128              0x7F, 0xBF, 0x7D, 0xBD, 0xBC, 0x7C, 0xB4, 0x74, 0x75, 0xB5,
+    129              0x77, 0xB7, 0xB6, 0x76, 0x72, 0xB2, 0xB3, 0x73, 0xB1, 0x71,
+    130              0x70, 0xB0, 0x50, 0x90, 0x91, 0x51, 0x93, 0x53, 0x52, 0x92,
+    131              0x96, 0x56, 0x57, 0x97, 0x55, 0x95, 0x94, 0x54, 0x9C, 0x5C,
+    132              0x5D, 0x9D, 0x5F, 0x9F, 0x9E, 0x5E, 0x5A, 0x9A, 0x9B, 0x5B,
+    133              0x99, 0x59, 0x58, 0x98, 0x88, 0x48, 0x49, 0x89, 0x4B, 0x8B,
+    134              0x8A, 0x4A, 0x4E, 0x8E, 0x8F, 0x4F, 0x8D, 0x4D, 0x4C, 0x8C,
+    135              0x44, 0x84, 0x85, 0x45, 0x87, 0x47, 0x46, 0x86, 0x82, 0x42,
+    136              0x43, 0x83, 0x41, 0x81, 0x80, 0x40
+    137          } ; 
+    138          
+
+   \                                 In section .text, align 2, keep-with-next
+    139          unsigned short GetModBusCrc16(unsigned char *puchMsg,unsigned short  usDataLen)
+    140          {
+   \                     GetModBusCrc16: (+1)
+   \   00000000   0xB430             PUSH     {R4,R5}
+   \   00000002   0x0002             MOVS     R2,R0
+    141              unsigned char uchCRCHi = 0xFF ; /* 高CRC字节初始化 */
+   \   00000004   0x20FF             MOVS     R0,#+255
+    142              unsigned char uchCRCLo = 0xFF ; /* 低CRC 字节初始化 */
+   \   00000006   0x23FF             MOVS     R3,#+255
+    143              unsigned uIndex ; /* CRC循环中的索引 */
+    144                  
+    145              while (usDataLen--) /* 传输消息缓冲区 */
+   \                     ??GetModBusCrc16_0: (+1)
+   \   00000008   0x000D             MOVS     R5,R1
+   \   0000000A   0x1E69             SUBS     R1,R5,#+1
+   \   0000000C   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   0000000E   0x2D00             CMP      R5,#+0
+   \   00000010   0xD00C             BEQ.N    ??GetModBusCrc16_1
+    146              {
+    147                  uIndex = uchCRCHi ^ *puchMsg++ ; /* 计算CRC */
+   \   00000012   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000014   0x7815             LDRB     R5,[R2, #+0]
+   \   00000016   0x4045             EORS     R5,R5,R0
+   \   00000018   0x002C             MOVS     R4,R5
+   \   0000001A   0x1C52             ADDS     R2,R2,#+1
+    148                  uchCRCHi = uchCRCLo ^ auchCRCHi[uIndex] ;
+   \   0000001C   0x....             LDR.N    R5,??DataTable2_1
+   \   0000001E   0x5D65             LDRB     R5,[R4, R5]
+   \   00000020   0x405D             EORS     R5,R5,R3
+   \   00000022   0x0028             MOVS     R0,R5
+    149                  uchCRCLo = auchCRCLo[uIndex] ;
+   \   00000024   0x....             LDR.N    R5,??DataTable2_2
+   \   00000026   0x5D65             LDRB     R5,[R4, R5]
+   \   00000028   0x002B             MOVS     R3,R5
+   \   0000002A   0xE7ED             B.N      ??GetModBusCrc16_0
+    150              }
+    151              
+    152              return (uchCRCHi << 8 | uchCRCLo) ;
+   \                     ??GetModBusCrc16_1: (+1)
+   \   0000002C   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000002E   0xB2DB             UXTB     R3,R3            ;; ZeroExt  R3,R3,#+24,#+24
+   \   00000030   0xEA53 0x2000      ORRS     R0,R3,R0, LSL #+8
+   \   00000034   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000036   0xBC30             POP      {R4,R5}
+   \   00000038   0x4770             BX       LR               ;; return
+    153          } 
+    154          
+
+   \                                 In section .text, align 2, keep-with-next
+    155          unsigned short GetModBusCrc16Up(unsigned char *puchMsg,unsigned short  usDataLen)
+    156          {
+   \                     GetModBusCrc16Up: (+1)
+   \   00000000   0xB430             PUSH     {R4,R5}
+   \   00000002   0x0002             MOVS     R2,R0
+    157              unsigned char uchCRCHi = 0xFF ; /* 高CRC字节初始化 */
+   \   00000004   0x20FF             MOVS     R0,#+255
+    158              unsigned char uchCRCLo = 0xFF ; /* 低CRC 字节初始化 */
+   \   00000006   0x23FF             MOVS     R3,#+255
+    159              unsigned uIndex ; /* CRC循环中的索引 */
+    160                  
+    161              while (usDataLen--) /* 传输消息缓冲区 */
+   \                     ??GetModBusCrc16Up_0: (+1)
+   \   00000008   0x000D             MOVS     R5,R1
+   \   0000000A   0x1E69             SUBS     R1,R5,#+1
+   \   0000000C   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   0000000E   0x2D00             CMP      R5,#+0
+   \   00000010   0xD00C             BEQ.N    ??GetModBusCrc16Up_1
+    162              {
+    163                  uIndex = uchCRCHi ^ *puchMsg++ ; /* 计算CRC */
+   \   00000012   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000014   0x7815             LDRB     R5,[R2, #+0]
+   \   00000016   0x4045             EORS     R5,R5,R0
+   \   00000018   0x002C             MOVS     R4,R5
+   \   0000001A   0x1C52             ADDS     R2,R2,#+1
+    164                  uchCRCHi = uchCRCLo ^ auchCRCHi[uIndex] ;
+   \   0000001C   0x....             LDR.N    R5,??DataTable2_1
+   \   0000001E   0x5D65             LDRB     R5,[R4, R5]
+   \   00000020   0x405D             EORS     R5,R5,R3
+   \   00000022   0x0028             MOVS     R0,R5
+    165                  uchCRCLo = auchCRCLo[uIndex] ;
+   \   00000024   0x....             LDR.N    R5,??DataTable2_2
+   \   00000026   0x5D65             LDRB     R5,[R4, R5]
+   \   00000028   0x002B             MOVS     R3,R5
+   \   0000002A   0xE7ED             B.N      ??GetModBusCrc16Up_0
+    166              }
+    167              
+    168              return (uchCRCLo << 8 | uchCRCHi) ;
+   \                     ??GetModBusCrc16Up_1: (+1)
+   \   0000002C   0xB2DB             UXTB     R3,R3            ;; ZeroExt  R3,R3,#+24,#+24
+   \   0000002E   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000030   0xEA50 0x2003      ORRS     R0,R0,R3, LSL #+8
+   \   00000034   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000036   0xBC30             POP      {R4,R5}
+   \   00000038   0x4770             BX       LR               ;; return
+    169          } 
+    170          
+    171          ////----------------------------------------------------------------------------
+    172          //// 名    称：   uint8 GetCheckSum(uint8 *Buf uint32 Len)
+    173          //// 功    能:    取校验和
+    174          //// 入口参数：   Buf：求数组   Len：数组长度
+    175          //// 出口参数：   校验和
+    176          ////----------------------------------------------------------------------------
+
+   \                                 In section .text, align 2, keep-with-next
+    177          uint8 GetCheckSum(uint8  Buf[], uint32 Len)
+    178          {
+   \                     GetCheckSum: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+   \   00000002   0x0002             MOVS     R2,R0
+    179              uint32  i;
+    180              uint8   CheckSum = 0;
+   \   00000004   0x2000             MOVS     R0,#+0
+    181              
+    182              for(i = 0;i < Len; i++)
+   \   00000006   0x2400             MOVS     R4,#+0
+   \   00000008   0x0023             MOVS     R3,R4
+   \                     ??GetCheckSum_0: (+1)
+   \   0000000A   0x428B             CMP      R3,R1
+   \   0000000C   0xD203             BCS.N    ??GetCheckSum_1
+    183              {
+    184                  CheckSum += Buf[i];                             //求和
+   \   0000000E   0x5C9C             LDRB     R4,[R3, R2]
+   \   00000010   0x1820             ADDS     R0,R4,R0
+    185              }
+   \   00000012   0x1C5B             ADDS     R3,R3,#+1
+   \   00000014   0xE7F9             B.N      ??GetCheckSum_0
+    186              
+    187              CheckSum = ~CheckSum + 1;                           //取反+1
+   \                     ??GetCheckSum_1: (+1)
+   \   00000016   0x43C0             MVNS     R0,R0
+   \   00000018   0x1C40             ADDS     R0,R0,#+1
+    188              
+    189              return  CheckSum;
+   \   0000001A   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000001C   0xBC10             POP      {R4}
+   \   0000001E   0x4770             BX       LR               ;; return
+    190          }
+    191          
+    192          //南瑞
+
+   \                                 In section .text, align 2, keep-with-next
+    193          uint8 GetCheckSumNR(uint8  Buf[], uint32 Len)
+    194          {
+   \                     GetCheckSumNR: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+   \   00000002   0x0002             MOVS     R2,R0
+    195              int32  i;
+    196              int8   CheckSum = 0;
+   \   00000004   0x2000             MOVS     R0,#+0
+    197              
+    198              for(i = 0;i < Len; i++)
+   \   00000006   0x2400             MOVS     R4,#+0
+   \   00000008   0x0023             MOVS     R3,R4
+   \                     ??GetCheckSumNR_0: (+1)
+   \   0000000A   0x428B             CMP      R3,R1
+   \   0000000C   0xD203             BCS.N    ??GetCheckSumNR_1
+    199              {
+    200                  CheckSum += Buf[i];                             //求和
+   \   0000000E   0x569C             LDRSB    R4,[R3, R2]
+   \   00000010   0x1820             ADDS     R0,R4,R0
+    201              }
+   \   00000012   0x1C5B             ADDS     R3,R3,#+1
+   \   00000014   0xE7F9             B.N      ??GetCheckSumNR_0
+    202              
+    203              if((unsigned char)CheckSum >= 0x80)
+   \                     ??GetCheckSumNR_1: (+1)
+   \   00000016   0x0004             MOVS     R4,R0
+   \   00000018   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000001A   0x2C80             CMP      R4,#+128
+   \   0000001C   0xDB02             BLT.N    ??GetCheckSumNR_2
+    204              {
+    205              	CheckSum = ~CheckSum + 1 +0x80;                       //取反+1
+   \   0000001E   0x43C0             MVNS     R0,R0
+   \   00000020   0x387F             SUBS     R0,R0,#+127
+   \   00000022   0xE7FF             B.N      ??GetCheckSumNR_3
+    206              }
+    207              else
+    208              {
+    209              	CheckSum = CheckSum;                       	//取反+1
+    210              }
+    211              return  CheckSum;
+   \                     ??GetCheckSumNR_2: (+1)
+   \                     ??GetCheckSumNR_3: (+1)
+   \   00000024   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000026   0xBC10             POP      {R4}
+   \   00000028   0x4770             BX       LR               ;; return
+    212          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \   00000000   0x........         DC32     sd_crc16_table
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_1:
+   \   00000000   0x........         DC32     auchCRCHi
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_2:
+   \   00000000   0x........         DC32     auchCRCLo
+    213          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       4   GetCheckSum
+       4   GetCheckSumNR
+      12   GetCrc16Check
+       8   GetModBusCrc16
+       8   GetModBusCrc16Up
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       4  ??DataTable2_2
+      32  GetCheckSum
+      42  GetCheckSumNR
+      52  GetCrc16Check
+      58  GetModBusCrc16
+      58  GetModBusCrc16Up
+     256  auchCRCHi
+     256  auchCRCLo
+     512  sd_crc16_table
+
+ 
+ 512 bytes in section .data
+ 512 bytes in section .rodata
+ 254 bytes in section .text
+ 
+ 254 bytes of CODE  memory
+ 512 bytes of CONST memory
+ 512 bytes of DATA  memory
+
+Errors: none
+Warnings: none

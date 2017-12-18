@@ -1,0 +1,378 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.50.1.10123/W32 for ARM       28/Nov/2017  16:24:33
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\iap\iap_flash.c
+#    Command line =  
+#        "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\iap\iap_flash.c"
+#        -D USE_STDPERIPH_DRIVER -lCN
+#        "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List"
+#        -o "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M3 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench 7.3\arm\INC\c\DLib_Config_Full.h"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\crccheck\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\csnrprotocol\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\IAP_pragram\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\usart\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\OS\uCOS-III\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\ST\STM32\inc\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-LIB\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\ARM-Cortex-M3\CMSIS\CM3\CoreSupport\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\ARM-Cortex-M3\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Source\"
+#        -On --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.3\arm\CMSIS\Include\"
+#    List file    =  
+#        F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List\iap_flash.lst
+#    Object file  =  
+#        F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj\iap_flash.o
+#
+###############################################################################
+
+F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III - 副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\iap\iap_flash.c
+      1          #include <includes.h>
+      2          
+      3          //////////////////////////////////////////////////////////////////////////////////	 
+      4          //本程序只供学习使用，未经作者许可，不得用于其它任何用途
+      5          //ALIENTEK STM32F407开发板
+      6          //STM32内部FLASH读写 驱动代码	   
+      7          //正点原子@ALIENTEK
+      8          //技术论坛:www.openedv.com
+      9          //创建日期:2014/5/9
+     10          //版本：V1.0
+     11          //版权所有，盗版必究。
+     12          //Copyright(C) 广州市星翼电子科技有限公司 2014-2024
+     13          //All rights reserved									  
+     14          ////////////////////////////////////////////////////////////////////////////////// 
+     15          
+     16          //#define	USER_APP_START_ADDR		    0x00010000 	
+     17          
+     18          //读取指定地址的半字(16位数据) 
+     19          //faddr:读地址 
+     20          //返回值:对应数据.
+
+   \                                 In section .text, align 2, keep-with-next
+     21          u32 STMFLASH_ReadWord(u32 faddr)
+     22          {
+     23          	return *(vu32*)faddr; 
+   \                     STMFLASH_ReadWord: (+1)
+   \   00000000   0x6800             LDR      R0,[R0, #+0]
+   \   00000002   0x4770             BX       LR               ;; return
+     24          }  
+     25          
+     26          //从指定地址开始写入指定长度的数据
+     27          //特别注意:因为STM32F4的扇区实在太大,没办法本地保存扇区数据,所以本函数
+     28          //         写地址如果非0XFF,那么会先擦除整个扇区且不保存扇区数据.所以
+     29          //         写非0XFF的地址,将导致整个扇区数据丢失.建议写之前确保扇区里
+     30          //         没有重要数据,最好是整个扇区先擦除了,然后慢慢往后写. 
+     31          //该函数对OTP区域也有效!可以用来写OTP区!
+     32          //OTP区域地址范围:0X1FFF7800~0X1FFF7A0F
+     33          //WriteAddr:起始地址(此地址必须为4的倍数!!)
+     34          //pBuffer:数据指针
+     35          //NumToWrite:字(32位)数(就是要写入的32位数据的个数.) 
+
+   \                                 In section .text, align 2, keep-with-next
+     36          void STMFLASH_Write(u32 WriteAddr,u32 *pBuffer,u32 NumToWrite)	
+     37          { 
+   \                     STMFLASH_Write: (+1)
+   \   00000000   0xE92D 0x43F8      PUSH     {R3-R9,LR}
+   \   00000004   0x0004             MOVS     R4,R0
+   \   00000006   0x000D             MOVS     R5,R1
+   \   00000008   0x0016             MOVS     R6,R2
+     38            FLASH_Status status = FLASH_COMPLETE;
+   \   0000000A   0x2704             MOVS     R7,#+4
+     39          	u32 addrx=0;
+   \   0000000C   0xF05F 0x0800      MOVS     R8,#+0
+     40          	u32 endaddr=0;	
+   \   00000010   0xF05F 0x0900      MOVS     R9,#+0
+     41            if(WriteAddr<STM32_FLASH_BASE||WriteAddr%4)return;	//非法地址
+   \   00000014   0xF1B4 0x6F00      CMP      R4,#+134217728
+   \   00000018   0xD306             BCC.N    ??STMFLASH_Write_0
+   \   0000001A   0x2004             MOVS     R0,#+4
+   \   0000001C   0xFBB4 0xF1F0      UDIV     R1,R4,R0
+   \   00000020   0xFB01 0x4110      MLS      R1,R1,R0,R4
+   \   00000024   0x2900             CMP      R1,#+0
+   \   00000026   0xD000             BEQ.N    ??STMFLASH_Write_1
+   \                     ??STMFLASH_Write_0: (+1)
+   \   00000028   0xE02B             B.N      ??STMFLASH_Write_2
+     42          	FLASH_Unlock();									//解锁 
+   \                     ??STMFLASH_Write_1: (+1)
+   \   0000002A   0x.... 0x....      BL       FLASH_Unlock
+     43            //FLASH_DataCacheCmd(DISABLE);//FLASH擦除期间,必须禁止数据缓存
+     44           		
+     45          	addrx=WriteAddr;				//写入的起始地址
+   \   0000002E   0x46A0             MOV      R8,R4
+     46          	endaddr=WriteAddr+NumToWrite*4;	//写入的结束地址
+   \   00000030   0xEB14 0x0086      ADDS     R0,R4,R6, LSL #+2
+   \   00000034   0x4681             MOV      R9,R0
+     47              
+     48          	if(addrx<0X1FFF0000)			//只有主存储区,才需要执行擦除操作!!
+   \   00000036   0x....             LDR.N    R0,??DataTable1  ;; 0x1fff0000
+   \   00000038   0x4580             CMP      R8,R0
+   \   0000003A   0xD212             BCS.N    ??STMFLASH_Write_3
+     49          	{
+     50          		while(addrx<endaddr)		//扫清一切障碍.(对非FFFFFFFF的地方,先擦除)
+   \                     ??STMFLASH_Write_4: (+1)
+   \   0000003C   0x45C8             CMP      R8,R9
+   \   0000003E   0xD210             BCS.N    ??STMFLASH_Write_3
+     51          		{
+     52          			if(STMFLASH_ReadWord(addrx)!=0XFFFFFFFF)//有非0XFFFFFFFF的地方,要擦除这个扇区
+   \   00000040   0x4640             MOV      R0,R8
+   \   00000042   0x.... 0x....      BL       STMFLASH_ReadWord
+   \   00000046   0xF110 0x0F01      CMN      R0,#+1
+   \   0000004A   0xD007             BEQ.N    ??STMFLASH_Write_5
+     53          			{   
+     54          				//status=FLASH_EraseSector(STMFLASH_GetFlashSector(addrx),VoltageRange_3);//VCC=2.7~3.6V之间!!
+     55          				status = FLASH_ErasePage(addrx);
+   \   0000004C   0x4640             MOV      R0,R8
+   \   0000004E   0x.... 0x....      BL       FLASH_ErasePage
+   \   00000052   0x0007             MOVS     R7,R0
+     56                          if(status!=FLASH_COMPLETE)break;	//发生错误了
+   \   00000054   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   00000056   0x2F04             CMP      R7,#+4
+   \   00000058   0xD0F0             BEQ.N    ??STMFLASH_Write_4
+   \   0000005A   0xE002             B.N      ??STMFLASH_Write_3
+     57          			}else addrx+=4;
+   \                     ??STMFLASH_Write_5: (+1)
+   \   0000005C   0xF118 0x0804      ADDS     R8,R8,#+4
+   \   00000060   0xE7EC             B.N      ??STMFLASH_Write_4
+     58          		} 
+     59          	}
+     60              
+     61          	if(status==FLASH_COMPLETE)
+   \                     ??STMFLASH_Write_3: (+1)
+   \   00000062   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   00000064   0x2F04             CMP      R7,#+4
+   \   00000066   0xD10A             BNE.N    ??STMFLASH_Write_6
+     62          	{
+     63          		while(WriteAddr<endaddr)//写数据
+   \                     ??STMFLASH_Write_7: (+1)
+   \   00000068   0x454C             CMP      R4,R9
+   \   0000006A   0xD208             BCS.N    ??STMFLASH_Write_6
+     64          		{
+     65          			if(FLASH_ProgramWord(WriteAddr,*pBuffer)!=FLASH_COMPLETE)//写入数据
+   \   0000006C   0x6829             LDR      R1,[R5, #+0]
+   \   0000006E   0x0020             MOVS     R0,R4
+   \   00000070   0x.... 0x....      BL       FLASH_ProgramWord
+   \   00000074   0x2804             CMP      R0,#+4
+   \   00000076   0xD102             BNE.N    ??STMFLASH_Write_6
+     66          			{ 
+     67          				break;	//写入异常
+     68          			}
+     69          			WriteAddr+=4;
+   \                     ??STMFLASH_Write_8: (+1)
+   \   00000078   0x1D24             ADDS     R4,R4,#+4
+     70          			pBuffer++;
+   \   0000007A   0x1D2D             ADDS     R5,R5,#+4
+   \   0000007C   0xE7F4             B.N      ??STMFLASH_Write_7
+     71          		} 
+     72          	}
+     73           // FLASH_DataCacheCmd(ENABLE);	//FLASH擦除结束,开启数据缓存
+     74          	FLASH_Lock();//上锁
+   \                     ??STMFLASH_Write_6: (+1)
+   \   0000007E   0x.... 0x....      BL       FLASH_Lock
+     75          } 
+   \                     ??STMFLASH_Write_2: (+1)
+   \   00000082   0xE8BD 0x83F1      POP      {R0,R4-R9,PC}    ;; return
+     76          
+     77          //从指定地址开始读出指定长度的数据
+     78          //ReadAddr:起始地址
+     79          //pBuffer:数据指针
+     80          //NumToRead:字(4位)数
+
+   \                                 In section .text, align 2, keep-with-next
+     81          void STMFLASH_Read(u32 ReadAddr,u32 *pBuffer,u32 NumToRead)   	
+     82          {
+   \                     STMFLASH_Read: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000D             MOVS     R5,R1
+   \   00000006   0x0016             MOVS     R6,R2
+     83          	u32 i;
+     84          	for(i=0;i<NumToRead;i++)
+   \   00000008   0x2000             MOVS     R0,#+0
+   \   0000000A   0x0007             MOVS     R7,R0
+   \                     ??STMFLASH_Read_0: (+1)
+   \   0000000C   0x42B7             CMP      R7,R6
+   \   0000000E   0xD207             BCS.N    ??STMFLASH_Read_1
+     85          	{
+     86          		pBuffer[i]=STMFLASH_ReadWord(ReadAddr);//读取4个字节.
+   \   00000010   0x0020             MOVS     R0,R4
+   \   00000012   0x.... 0x....      BL       STMFLASH_ReadWord
+   \   00000016   0xF845 0x0027      STR      R0,[R5, R7, LSL #+2]
+     87          		ReadAddr+=4;//偏移4个字节.	
+   \   0000001A   0x1D24             ADDS     R4,R4,#+4
+     88          	}
+   \   0000001C   0x1C7F             ADDS     R7,R7,#+1
+   \   0000001E   0xE7F5             B.N      ??STMFLASH_Read_0
+     89          }
+   \                     ??STMFLASH_Read_1: (+1)
+   \   00000020   0xBDF1             POP      {R0,R4-R7,PC}    ;; return
+     90          
+     91          
+
+   \                                 In section .bss, align 4
+     92          u32 iapbuf[512]; 	//2K字节缓存  
+   \                     iapbuf:
+   \   00000000                      DS8 2048
+     93          //appxaddr:应用程序的起始地址
+     94          //appbuf:应用程序CODE.
+     95          //appsize:应用程序大小(字节).
+
+   \                                 In section .text, align 2, keep-with-next
+     96          void iap_write_appbin(u32 appxaddr,u8 *appbuf,u32 appsize)
+     97          {
+   \                     iap_write_appbin: (+1)
+   \   00000000   0xE92D 0x4FF8      PUSH     {R3-R11,LR}
+   \   00000004   0x0004             MOVS     R4,R0
+   \   00000006   0x000D             MOVS     R5,R1
+   \   00000008   0x0016             MOVS     R6,R2
+     98          	u32 t;
+     99          	u16 i=0;
+   \   0000000A   0xF05F 0x0800      MOVS     R8,#+0
+    100          	u32 temp;
+    101          	u32 fwaddr=appxaddr;//当前写入的地址
+   \   0000000E   0x46A2             MOV      R10,R4
+    102          	u8 *dfu=appbuf;
+   \   00000010   0x46AB             MOV      R11,R5
+    103          	for(t=0;t<appsize;t+=4)
+   \   00000012   0x2000             MOVS     R0,#+0
+   \   00000014   0x0007             MOVS     R7,R0
+   \                     ??iap_write_appbin_0: (+1)
+   \   00000016   0x42B7             CMP      R7,R6
+   \   00000018   0xD229             BCS.N    ??iap_write_appbin_1
+    104          	{						   
+    105          		temp =(u32)dfu[3]<<24;   
+   \   0000001A   0xF89B 0x0003      LDRB     R0,[R11, #+3]
+   \   0000001E   0x0600             LSLS     R0,R0,#+24
+   \   00000020   0x4681             MOV      R9,R0
+    106          		temp|=(u32)dfu[2]<<16;    
+   \   00000022   0xF89B 0x0002      LDRB     R0,[R11, #+2]
+   \   00000026   0xEA59 0x4900      ORRS     R9,R9,R0, LSL #+16
+    107          		temp|=(u32)dfu[1]<<8;
+   \   0000002A   0xF89B 0x0001      LDRB     R0,[R11, #+1]
+   \   0000002E   0xEA59 0x2900      ORRS     R9,R9,R0, LSL #+8
+    108          		temp|=(u32)dfu[0];	  
+   \   00000032   0xF89B 0x0000      LDRB     R0,[R11, #+0]
+   \   00000036   0xEA50 0x0909      ORRS     R9,R0,R9
+    109          		dfu +=4;//偏移4个字节
+   \   0000003A   0xF11B 0x0B04      ADDS     R11,R11,#+4
+    110          		iapbuf[i++]=temp;	    
+   \   0000003E   0x....             LDR.N    R0,??DataTable1_1
+   \   00000040   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   00000044   0xF840 0x9028      STR      R9,[R0, R8, LSL #+2]
+   \   00000048   0xF118 0x0801      ADDS     R8,R8,#+1
+    111          		if( i==512 )
+   \   0000004C   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   00000050   0xF5B8 0x7F00      CMP      R8,#+512
+   \   00000054   0xD109             BNE.N    ??iap_write_appbin_2
+    112          		{
+    113          			i=0; 
+   \   00000056   0x2000             MOVS     R0,#+0
+   \   00000058   0x4680             MOV      R8,R0
+    114          			STMFLASH_Write(fwaddr,iapbuf,512);
+   \   0000005A   0xF44F 0x7200      MOV      R2,#+512
+   \   0000005E   0x....             LDR.N    R1,??DataTable1_1
+   \   00000060   0x4650             MOV      R0,R10
+   \   00000062   0x.... 0x....      BL       STMFLASH_Write
+    115          			fwaddr+=2048;//偏移2048  512*4=2048
+   \   00000066   0xF51A 0x6A00      ADDS     R10,R10,#+2048
+    116          		}
+    117          	} 
+   \                     ??iap_write_appbin_2: (+1)
+   \   0000006A   0x1D3F             ADDS     R7,R7,#+4
+   \   0000006C   0xE7D3             B.N      ??iap_write_appbin_0
+    118          	if(i)STMFLASH_Write(fwaddr,iapbuf,i);//将最后的一些内容字节写进去.  
+   \                     ??iap_write_appbin_1: (+1)
+   \   0000006E   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   00000072   0xF1B8 0x0F00      CMP      R8,#+0
+   \   00000076   0xD006             BEQ.N    ??iap_write_appbin_3
+   \   00000078   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   0000007C   0x4642             MOV      R2,R8
+   \   0000007E   0x....             LDR.N    R1,??DataTable1_1
+   \   00000080   0x4650             MOV      R0,R10
+   \   00000082   0x.... 0x....      BL       STMFLASH_Write
+    119          }
+   \                     ??iap_write_appbin_3: (+1)
+   \   00000086   0xE8BD 0x8FF1      POP      {R0,R4-R11,PC}   ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x1FFF0000         DC32     0x1fff0000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \   00000000   0x........         DC32     iapbuf
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      24   STMFLASH_Read
+        24   -> STMFLASH_ReadWord
+       0   STMFLASH_ReadWord
+      32   STMFLASH_Write
+        32   -> FLASH_ErasePage
+        32   -> FLASH_Lock
+        32   -> FLASH_ProgramWord
+        32   -> FLASH_Unlock
+        32   -> STMFLASH_ReadWord
+      40   iap_write_appbin
+        40   -> STMFLASH_Write
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+      34  STMFLASH_Read
+       4  STMFLASH_ReadWord
+     134  STMFLASH_Write
+     138  iap_write_appbin
+    2048  iapbuf
+
+ 
+ 2 048 bytes in section .bss
+   318 bytes in section .text
+ 
+   318 bytes of CODE memory
+ 2 048 bytes of DATA memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,316 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.50.1.10123/W32 for ARM       28/Nov/2017  16:28:11
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\app.c
+#    Command line =  
+#        "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\app.c"
+#        -D USE_STDPERIPH_DRIVER -lCN
+#        "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List"
+#        -o "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M3 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench 7.3\arm\INC\c\DLib_Config_Full.h"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\crccheck\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\csnrprotocol\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\IAP_pragram\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\usart\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\OS\uCOS-III\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\ST\STM32\inc\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-LIB\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\ARM-Cortex-M3\CMSIS\CM3\CoreSupport\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\ARM-Cortex-M3\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\"
+#        -I "F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Source\"
+#        -On --use_c++_inline -I "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.3\arm\CMSIS\Include\"
+#    List file    =  
+#        F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List\app.lst
+#    Object file  =  
+#        F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III -
+#        副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj\app.o
+#
+###############################################################################
+
+F:\iar\Micrium_uC-Eval-STM32F107_uCOS-III - 副本\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\app.c
+      1          /*
+      2          *********************************************************************************************************
+      3          *                                              EXAMPLE CODE
+      4          *
+      5          *                          (c) Copyright 2003-2013; Micrium, Inc.; Weston, FL
+      6          *
+      7          *               All rights reserved.  Protected by international copyright laws.
+      8          *               Knowledge of the source code may NOT be used to develop a similar product.
+      9          *               Please help us continue to provide the Embedded community with the finest
+     10          *               software available.  Your honesty is greatly appreciated.
+     11          *********************************************************************************************************
+     12          */
+     13          
+     14          /*
+     15          *********************************************************************************************************
+     16          *
+     17          *                                            EXAMPLE CODE
+     18          *
+     19          *                                     ST Microelectronics STM32
+     20          *                                              on the
+     21          *
+     22          *                                     Micrium uC-Eval-STM32F107
+     23          *                                        Evaluation Board
+     24          *
+     25          * Filename      : app.c
+     26          * Version       : V1.00
+     27          * Programmer(s) : EHS
+     28          *                 DC
+     29          *********************************************************************************************************
+     30          */
+     31          
+     32          /*
+     33          *********************************************************************************************************
+     34          *                                             INCLUDE FILES
+     35          *********************************************************************************************************
+     36          */
+     37          
+     38          #include <includes.h>
+     39          
+     40          
+     41          /*
+     42          *********************************************************************************************************
+     43          *                                            LOCAL DEFINES
+     44          *********************************************************************************************************
+     45          */
+     46          
+     47          /*
+     48          *********************************************************************************************************
+     49          *                                                 TCB
+     50          *********************************************************************************************************
+     51          */
+     52          
+     53          static  OS_TCB   AppTaskStartTCB;
+     54          
+     55          
+     56          /*
+     57          *********************************************************************************************************
+     58          *                                                STACKS
+     59          *********************************************************************************************************
+     60          */
+     61          
+     62          static  CPU_STK  AppTaskStartStk[APP_TASK_START_STK_SIZE];
+     63          
+     64          
+     65          /*
+     66          *********************************************************************************************************
+     67          *                                         FUNCTION PROTOTYPES
+     68          *********************************************************************************************************
+     69          */
+     70          
+     71          static  void  AppTaskCreate (void);
+     72          static  void  AppObjCreate  (void);
+     73          static  void  AppTaskStart  (void *p_arg);
+     74          
+     75          
+     76          /*
+     77          *********************************************************************************************************
+     78          *                                                main()
+     79          *
+     80          * Description : This is the standard entry point for C code.  It is assumed that your code will call
+     81          *               main() once you have performed all necessary initialization.
+     82          *
+     83          * Arguments   : none
+     84          *
+     85          * Returns     : none
+     86          *********************************************************************************************************
+     87          */
+     88          
+
+   \                                 In section .text, align 4, keep-with-next
+     89          int  main (void)
+     90          {
+   \                     main: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+     91              CPU_INT32U  cpu_clk_freq;
+     92              CPU_INT32U  cnts;
+     93              OS_ERR      err;
+     94              
+     95              BSP_Init();                                                 /* Initialize BSP functions                             */
+   \   00000002   0x.... 0x....      BL       BSP_Init
+     96              CPU_Init();
+   \   00000006   0x.... 0x....      BL       CPU_Init
+     97          
+     98              cpu_clk_freq = BSP_CPU_ClkFreq();                           /* Determine SysTick reference freq.                    */
+   \   0000000A   0x.... 0x....      BL       BSP_CPU_ClkFreq
+   \   0000000E   0x0004             MOVS     R4,R0
+     99              cnts = cpu_clk_freq / (CPU_INT32U)OSCfg_TickRate_Hz;        /* Determine nbr SysTick increments                     */
+   \   00000010   0x4809             LDR.N    R0,??main_0
+   \   00000012   0x6800             LDR      R0,[R0, #+0]
+   \   00000014   0xFBB4 0xF0F0      UDIV     R0,R4,R0
+   \   00000018   0x0005             MOVS     R5,R0
+    100              OS_CPU_SysTickInit(cnts);                                   /* Init uC/OS periodic time src (SysTick).              */
+   \   0000001A   0x0028             MOVS     R0,R5
+   \   0000001C   0x.... 0x....      BL       OS_CPU_SysTickInit
+    101          
+    102              BSP_LED_Off(0);
+   \   00000020   0x2000             MOVS     R0,#+0
+   \   00000022   0x.... 0x....      BL       BSP_LED_Off
+    103              uart_init(57600);
+   \   00000026   0xF44F 0x4061      MOV      R0,#+57600
+   \   0000002A   0x.... 0x....      BL       uart_init
+    104              
+    105              IAP_PragramTask();
+   \   0000002E   0x.... 0x....      BL       IAP_PragramTask
+    106          }
+   \   00000032   0x2000             MOVS     R0,#+0
+   \   00000034   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+   \   00000036   0xBF00             Nop      
+   \                     ??main_0:
+   \   00000038   0x........         DC32     OSCfg_TickRate_Hz
+    107          
+    108          
+    109          /*
+    110          *********************************************************************************************************
+    111          *                                          STARTUP TASK
+    112          *
+    113          * Description : This is an example of a startup task.  As mentioned in the book's text, you MUST
+    114          *               initialize the ticker only once multitasking has started.
+    115          *
+    116          * Arguments   : p_arg   is the argument passed to 'AppTaskStart()' by 'OSTaskCreate()'.
+    117          *
+    118          * Returns     : none
+    119          *
+    120          * Notes       : 1) The first line of code is used to prevent a compiler warning because 'p_arg' is not
+    121          *                  used.  The compiler should not generate any code for this statement.
+    122          *********************************************************************************************************
+    123          */
+    124          
+    125          static  void  AppTaskStart (void *p_arg)
+    126          {
+    127              CPU_INT32U  cpu_clk_freq;
+    128              CPU_INT32U  cnts;
+    129              OS_ERR      err;
+    130          
+    131             (void)p_arg;
+    132          
+    133              BSP_Init();                                                 /* Initialize BSP functions                             */
+    134              CPU_Init();
+    135          
+    136          //    cpu_clk_freq = BSP_CPU_ClkFreq();                           /* Determine SysTick reference freq.                    */
+    137          //    cnts = cpu_clk_freq / (CPU_INT32U)OSCfg_TickRate_Hz;        /* Determine nbr SysTick increments                     */
+    138          //    OS_CPU_SysTickInit(cnts);                                   /* Init uC/OS periodic time src (SysTick).              */
+    139          
+    140              Mem_Init();                                                 /* Initialize Memory Management Module                  */
+    141          
+    142          //#if OS_CFG_STAT_TASK_EN > 0u
+    143          //    OSStatTaskCPUUsageInit(&err);                               /* Compute CPU capacity with no task running            */
+    144          //#endif
+    145          //
+    146          //    CPU_IntDisMeasMaxCurReset();
+    147          //
+    148          //#if (APP_CFG_SERIAL_EN == DEF_ENABLED)
+    149          //    BSP_Ser_Init(115200);                                       /* Enable Serial Interface                              */
+    150          //#endif
+    151          //    
+    152          //    APP_TRACE_INFO(("Creating Application Tasks...\n\r"));
+    153          //    AppTaskCreate();                                            /* Create Application Tasks                             */
+    154          //    
+    155          //    APP_TRACE_INFO(("Creating Application Events...\n\r"));
+    156          //    AppObjCreate();                                             /* Create Application Objects                           */
+    157              
+    158              BSP_LED_Off(0);
+    159              uart_init(57600);
+    160              
+    161              IAP_PragramTask();
+    162          
+    163          
+    164          }
+    165          
+    166          
+    167          /*
+    168          *********************************************************************************************************
+    169          *                                      CREATE APPLICATION TASKS
+    170          *
+    171          * Description:  This function creates the application tasks.
+    172          *
+    173          * Arguments  :  none
+    174          *
+    175          * Returns    :  none
+    176          *********************************************************************************************************
+    177          */
+    178          
+    179          static  void  AppTaskCreate (void)
+    180          {
+    181          }
+    182          
+    183          
+    184          /*
+    185          *********************************************************************************************************
+    186          *                                      CREATE APPLICATION EVENTS
+    187          *
+    188          * Description:  This function creates the application kernel objects.
+    189          *
+    190          * Arguments  :  none
+    191          *
+    192          * Returns    :  none
+    193          *********************************************************************************************************
+    194          */
+    195          
+    196          static  void  AppObjCreate (void)
+    197          {
+    198          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   main
+        16   -> BSP_CPU_ClkFreq
+        16   -> BSP_Init
+        16   -> BSP_LED_Off
+        16   -> CPU_Init
+        16   -> IAP_PragramTask
+        16   -> OS_CPU_SysTickInit
+        16   -> uart_init
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      60  main
+
+ 
+ 60 bytes in section .text
+ 
+ 60 bytes of CODE memory
+
+Errors: none
+Warnings: 13

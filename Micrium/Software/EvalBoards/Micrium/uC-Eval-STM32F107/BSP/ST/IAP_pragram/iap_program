@@ -1,0 +1,235 @@
+
+__asm void JMP_Boot( uint32_t address ){
+   LDR SP, [R0]		;Load new stack pointer address
+   LDR PC, [R0, #4]	;Load new program counter address
+}
+
+#define zyIrqDisable()  __disable_irq()
+#define zyIrqEnable()   __enable_irq()
+
+
+//启动app
+void Boot( void )
+{
+//	 void (*userProgram)();   					           /*函数指针*/
+
+	SCB->VTOR = USER_APP_START_ADDR & 0x1FFFFF80;	//偏移中断向量
+
+	JMP_Boot(USER_APP_START_ADDR);
+//	userProgram = (void (*)()) (USER_APP_START_ADDR+1);
+//	(*userProgram)();													/*启动						*/	 
+	
+}
+
+
+
+//对flash 进行擦写
+//默认进入长度len=128
+#define		MAX_SEC_NUM   22
+void	IAP_pragramDeal(uint8	*buf,uint32	len)
+{
+	static	uint32	flashlen = 0;
+	static	uint32	curaddr = USER_APP_START_ADDR;
+	static	uint8	iapbuf[2048];
+	static	uint32	iapbuflen = 0;
+	static	uint8		times = 0;
+	  uint32_t result[4];
+	  uint8_t ver_major, ver_minor;
+	  uint32_t i;
+	  uint8_t *ptr;
+	  uint32_t flash_prog_area_sec_start;
+	  uint32_t flash_prog_area_sec_end;
+	  IAP_STATUS_CODE status;
+
+		times++;
+		memcpy(&iapbuf[iapbuflen],buf,len);
+    
+		iapbuflen +=len;
+	   
+		if(times == 1024/128 || len != 128)
+		{
+			if(len != 128)
+			{
+				for(i = iapbuflen;i<1024;i++ )
+				iapbuf[i] = 0xff;	
+			}
+
+			times = 0;
+			iapbuflen = 0;
+			
+			zyIrqDisable();										//关中断
+
+			if(flashlen == 0)									// 第一次
+			{
+				curaddr = USER_APP_START_ADDR;
+	 			status = ReadPartID(result);
+				printfcom0("\r\nPartID:%d,status %d",result[0],status);
+				 
+		  	status = ReadBootCodeVer(&ver_major, &ver_minor);
+		  	printfcom0("\r\nBoot Code Version:%d.%d status %d",ver_major,ver_minor,status);
+	
+		  	status = ReadDeviceSerialNum(result);
+		  	i=0;
+	 			printfcom0("\r\nUID:%d-%d-%d-%d status %d",result[i++],result[i++],result[i++],result[i++],status);
+	 			
+	 		 	flash_prog_area_sec_start = 	GetSecNum(curaddr);
+		  	flash_prog_area_sec_end 	=  	GetSecNum(curaddr + 1024);
+		  	
+//		  		status = EraseSector(flash_prog_area_sec_start, flash_prog_area_sec_end);
+				status = EraseSector(flash_prog_area_sec_start, MAX_SEC_NUM);
+				printfcom0("\r\nErase chip0: Success. status %d",status); 							
+		  		//status = BlankCheckSector(flash_prog_area_sec_start, flash_prog_area_sec_end,
+                //                  &result[0], &result[1]);
+		  		status = BlankCheckSector(flash_prog_area_sec_start, MAX_SEC_NUM,
+                                  &result[0], &result[1]);
+				printfcom0("\r\nErase chip1: Success. status %d",status);                                  
+	 		}
+
+// 		 	flash_prog_area_sec_start 	= 	GetSecNum(curaddr);
+//	  		flash_prog_area_sec_end 	=  	GetSecNum(curaddr + 1024);	 		
+//	 		if(flash_prog_area_sec_start != flash_prog_area_sec_end)												//跨区，清next区
+// 			{
+// 				status = EraseSector(flash_prog_area_sec_end, flash_prog_area_sec_end);
+//				printfcom0("\r\nErase chip0: Success. status %d ",status); 
+//		  		status = BlankCheckSector(flash_prog_area_sec_start, flash_prog_area_sec_end,
+//                                  &result[0], &result[1]);
+//				printfcom0("\r\nErase chip1: Success. status %d  curaddr %x ",status,curaddr);     				
+// 			}
+
+	    	curaddr = USER_APP_START_ADDR + flashlen;
+			status 	= CopyRAM2Flash((uint8 *)curaddr, iapbuf,IAP_WRITE_1024);
+			flashlen += 1024;
+
+  // Compare
+			status =  Compare((uint8 *)curaddr, iapbuf,IAP_WRITE_1024);
+			printfcom0("\r\nCompare status %d  curaddr %x ",status,curaddr);
+
+//			printfcom0("\r\n");
+//			for(i = 0 ;i<IAP_WRITE_1024;i++)
+//			printfcom0("%02x",iapbuf[i]);
+
+			printfcom0("\r\n");
+			zyIrqEnable();
+		}
+		//DelayX10ms(2);	
+}
+
+extern	unsigned char  CSNR_GetData(unsigned char	*RecBuf,unsigned char RecLen,unsigned char	*DataBuf,unsigned char	*InfoLen) ;
+
+
+void	IAP_PragramTask(void)
+{
+		static	uint32  	time = 0;
+		static	uint8		praflg = 0;
+		
+		uint8		recbuf[256];
+		uint8		databuf[256];
+		uint32		reclen 	= 0;	
+		uint32		datalen = 0;
+		uint32		tmp;
+		char		startstring[]={"IAP_pragram start!"};
+		char		pramstring[]={"."};
+		char		holdstring[]={"!"};
+		char		endstring[]={"IAP_pragram end!"};
+		char		*p;
+		uint32		i;
+		static		uint8	lstrecnum = 0;
+		
+		time = GetSysTime();
+		while(1)
+		{
+				DelayX10ms(1);
+                u32 reclen;
+                reclen = 
+                
+				if(GetFramRecEndFlgIAP())
+				{
+					tmp = ReadRs485DataIAP(recbuf);
+					ClearFramRecEndFlgIAP();
+
+					if(tmp == 0)
+						continue ;
+
+					
+					CSNR_GetData(recbuf,tmp,databuf,(uint8 *)&datalen); 
+
+					if(praflg == 0)
+					{
+						 databuf[datalen] = '\0';
+						
+						 if(strcmp((char *)&databuf[0],startstring) == 0)				//编程判定
+						 	{
+									lstrecnum = GetRecFramNum();
+									SetFramNum(lstrecnum);
+
+						 			praflg = 1;
+						 			DataSend_CSNR(0x80,0xA1,startstring,strlen(startstring));	   
+								
+						 			printfcom0(" s:%s\r\n",startstring);
+									time = GetSysTime();							
+									continue ;
+									//return;
+						 	}
+					} 
+					else																					
+					{
+						printfcom0("\r\n lstrecnum %x,%x",lstrecnum, GetFramNum());
+						if(lstrecnum == GetRecFramNum())
+						{
+								DataSend_CSNR(0x80,0xA1,holdstring,strlen(holdstring));	
+								time = GetSysTime();
+						}
+						else
+						{	
+							lstrecnum = GetRecFramNum();
+							SetFramNum(lstrecnum);
+
+							IAP_pragramDeal(databuf,datalen);					//编程						   	
+#ifdef CVI													
+							databuf[datalen] = '\0';
+							printfcom0texbox(databuf);
+#endif				
+							DataSend_CSNR(0x80,0xA1,pramstring,strlen(pramstring));	 
+							printfcom0("%s",pramstring);
+							
+							if(datalen != 128)												//结束编程
+							{	
+								DataSend_CSNR(0x80,0xA1,endstring,strlen(endstring));	
+								printfcom0("\r\n len != 128");
+								break;
+							}
+	
+							time = GetSysTime();
+						}
+					}
+				}
+				
+				if(praflg == 0)
+				{
+					if(GetSysTime() - time > 200)										//退出
+					{
+						printfcom0("\r\nGetSysTime() - time > 1000");
+						break;
+					}
+				}
+				else
+				{
+					if(GetSysTime() - time > 2000)										//退出
+					{
+						printfcom0("\r\nGetSysTime() - time > 1000");
+						break;
+					}
+				}
+		}	
+		
+//		p =  (uint8 *)USER_APP_START_ADDR;
+//		for(i = 0;i < 0x20000;i++ )
+//		{
+//			printfcom0("%02x",*p);
+//			p++;
+//		}
+		printfcom0("\r\n boot end");
+
+
+		Boot();
+}
